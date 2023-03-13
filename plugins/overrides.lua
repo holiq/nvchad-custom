@@ -2,7 +2,6 @@ local M = {}
 
 M.treesitter = {
     ensure_installed = {'javascript', 'lua', 'php', 'typescript', 'json', 'css', 'help' },
-
 }
 
 M.mason = {
@@ -59,8 +58,6 @@ M.telescope = {
 
 M.nvdash = {
   header = {
-    type = "text",
-    val = {
       "   ",
       "   /\\\\\\        /\\\\\\                /\\\\\\                               ",
       "   \\/\\\\\\       \\/\\\\\\               \\/\\\\\\                              ",
@@ -72,20 +69,7 @@ M.nvdash = {
       "         \\/\\\\\\       \\/\\\\\\  \\///\\\\\\\\\\/   \\/\\\\\\   \\/\\\\\\  \\///\\\\\\\\\\/    ",
       "          \\///        \\///     \\/////     \\///    \\///     \\/////     ",
       "   ",
-    },
-    opts = {
-      position = "center",
-      hl = "AlphaHeader",
-    },
   },
-  footer = {
-    type = "text",
-    val = "ini foooter",
-    opts = {
-      position = "center",
-      hl = "AlphaHeader"
-    }
-  }
 }
 
 return M
