@@ -8,7 +8,7 @@ local plugins = {
     -- disable = false,
     -- override_options = overrides.alpha
   -- },
-  
+
   {
     "NvChad/ui",
     opts = overrides.ui
@@ -52,12 +52,12 @@ local plugins = {
     "williamboman/mason.nvim",
     opts = overrides.mason,
   },
-  
+
   {
     "nvim-telescope/telescope.nvim",
     otps = overrides.telescope,
   },
-  
+
   {
     "wakatime/vim-wakatime"
   },
@@ -65,10 +65,10 @@ local plugins = {
   {
     "windwp/nvim-autopairs",
     opts = function ()
-      require "custom.configs.autopairs"
+      -- require "custom.configs.autopairs"
     end
   },
-  
+
   {
     "Darazaki/indent-o-matic",
     config = function ()
