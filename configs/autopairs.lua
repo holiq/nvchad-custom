@@ -1,9 +1,9 @@
-local npairs = require'nvim-autopairs'
-local Rule   = require'nvim-autopairs.rule'
+local npairs = require 'nvim-autopairs'
+local Rule   = require 'nvim-autopairs.rule'
 
 local brackets = { { '(', ')' }, { '[', ']' }, { '{', '}' } }
-npairs.add_rules {
 
+npairs.add_rules {
   Rule(' ', ' ')
     :with_pair(function (opts)
       local pair = opts.line:sub(opts.col - 1, opts.col)
@@ -14,6 +14,7 @@ npairs.add_rules {
       }, pair)
     end)
 }
+
 for _,bracket in pairs(brackets) do
   npairs.add_rules {
     Rule(bracket[1]..' ', ' '..bracket[2])
@@ -28,3 +29,4 @@ end
 Rule('%(.*%)%s*%=>$', ' {  }', { 'typescript', 'typescriptreact', 'javascript' })
   :use_regex(true)
   :set_end_pair_length(2)
+

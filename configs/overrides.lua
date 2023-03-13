@@ -1,21 +1,26 @@
 local M = {}
 
 M.treesitter = {
-    ensure_installed = {'javascript', 'lua', 'php', 'typescript', 'json', 'css', 'help' },
+  ensure_installed = {
+    "lua",
+    "javascript",
+    "typescript",
+    "json",
+    "php",
+  },
 }
 
 M.mason = {
   ensure_installed = {
     "lua-language-server",
+    "stylua",
     "intelephense",
-    "eslint-lsp",
-    "json-lsp",
-    "prettier",
-    "luaformatter",
     "typescript-language-server",
+    "deno",
   },
 }
 
+-- git support in nvimtree
 M.nvimtree = {
   git = {
     enable = true,
@@ -46,18 +51,21 @@ M.telescope = {
       "--no-ignore",
     },
     file_ignore_patterns = { "node_modules", ".git", "vendor" },
-    -- mappings = {
-    --   i = {
-    --     ["<C-j>"] = require("telescope.actions").move_selection_next,
-    --     ["<C-k>"] = require("telescope.actions").move_selection_previous,
-    --     ["<esc>"] = require("telescope.actions").close,
-    --   },
-    -- },
+    mappings = {
+      i = {
+        ["<C-j>"] = require("telescope.actions").move_selection_next,
+        ["<C-k>"] = require("telescope.actions").move_selection_previous,
+        ["<esc>"] = require("telescope.actions").close,
+      },
+    },
   },
 }
 
-M.nvdash = {
-  header = {
+M.ui = {
+  nvdash = {
+    load_on_startup = true,
+
+    header = {
       "   ",
       "   /\\\\\\        /\\\\\\                /\\\\\\                               ",
       "   \\/\\\\\\       \\/\\\\\\               \\/\\\\\\                              ",
@@ -69,7 +77,9 @@ M.nvdash = {
       "         \\/\\\\\\       \\/\\\\\\  \\///\\\\\\\\\\/   \\/\\\\\\   \\/\\\\\\  \\///\\\\\\\\\\/    ",
       "          \\///        \\///     \\/////     \\///    \\///     \\/////     ",
       "   ",
+    },
   },
 }
+
 
 return M

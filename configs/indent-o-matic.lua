@@ -24,3 +24,4 @@ indent.setup {
         standard_widths = { 2, 4 },
     },
 }
+
