@@ -57,7 +57,7 @@ M.telescope = {
   },
 }
 
-M.alpha = {
+M.nvdash = {
   header = {
     type = "text",
     val = {
