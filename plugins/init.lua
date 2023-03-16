@@ -32,7 +32,9 @@ local plugins = {
     override_options = overrides.telescope,
   },
 
-  ["wakatime/wakatime.nvim"] = true,
+  ["wakatime/vim-wakatime"] = {
+    config = true,
+  },
 
   ["windwp/nvim-autopairs"] = {
     config = function ()
