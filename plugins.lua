@@ -1,19 +1,7 @@
-local overrides = require("custom.configs.overrides")
+local overrides = require "custom.configs.overrides"
 
 ---@type NvPluginSpec[]
 local plugins = {
-  -- {
-    -- "goolord/alpha-nvim",
-    -- after = "base46",
-    -- disable = false,
-    -- override_options = overrides.alpha
-  -- },
-
-  {
-    "NvChad/ui",
-    opts = overrides.ui
-  },
-
   {
     "neovim/nvim-lspconfig",
     dependencies = {
@@ -59,22 +47,37 @@ local plugins = {
   },
 
   {
-    "wakatime/vim-wakatime"
+    "wakatime/vim-wakatime",
+    lazy = false,
   },
 
   {
-    "windwp/nvim-autopairs",
-    opts = function ()
-      -- require "custom.configs.autopairs"
-    end
+    "altermo/npairs-integrate-upair",
+    dependencies = {
+      "windwp/nvim-autopairs",
+      "altermo/ultimate-autopair.nvim",
+    },
+    lazy = false,
+    config = function()
+      require "custom.configs.upair"
+    end,
   },
 
   {
     "Darazaki/indent-o-matic",
-    config = function ()
+    lazy = false,
+    config = function()
       require "custom.configs.indent-o-matic"
-    end
-  }
+    end,
+  },
+
+  {
+    "abecodes/tabout.nvim",
+    lazy = false,
+    config = function()
+      require "custom.configs.tabout"
+    end,
+  },
 }
 
 return plugins

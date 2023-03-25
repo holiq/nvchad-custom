@@ -19,4 +19,8 @@ M.add = {
   NvimTreeOpenedFolderName = { fg = "green", bold = true },
 }
 
+M.nvdash = {
+  load_on_startup = true,
+}
+
 return M
