@@ -43,7 +43,7 @@ local plugins = {
 
   {
     "nvim-telescope/telescope.nvim",
-    otps = overrides.telescope,
+    opts = overrides.telescope,
   },
 
   {
