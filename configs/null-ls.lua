@@ -7,16 +7,13 @@ end
 local b = null_ls.builtins
 
 local sources = {
+  b.formatting.deno_fmt.with { filetypes = { "typescript", "javascript" } },
 
-  -- webdev stuff
-  b.formatting.deno_fmt, -- choosed deno for ts/js files cuz its very fast!
-  b.formatting.prettier.with { filetypes = { "html", "markdown", "css" } }, -- so prettier works only on these filetypes
+  b.formatting.prettier.with { filetypes = { "html", "markdown", "css" } },
 
-  -- Lua
-  b.formatting.stylua,
+  b.formatting.stylua.with { filetypes = { "lua" } },
 
-  -- cpp
-  b.formatting.clang_format,
+  b.formatting.pint.with { filetypes = { "php" } },
 }
 
 null_ls.setup {

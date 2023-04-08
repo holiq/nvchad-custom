@@ -18,6 +18,7 @@ M.mason = {
     "intelephense",
     "typescript-language-server",
     "html-lsp",
+    "pint",
   },
 }
 
