@@ -78,6 +78,11 @@ local plugins = {
       require "custom.configs.tabout"
     end,
   },
+  {
+    "akinsho/toggleterm.nvim",
+    lazy = false,
+    config = true
+  },
 }
 
 return plugins
