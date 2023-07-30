@@ -52,18 +52,6 @@ local plugins = {
   },
 
   {
-    "altermo/npairs-integrate-upair",
-    dependencies = {
-      "windwp/nvim-autopairs",
-      "altermo/ultimate-autopair.nvim",
-    },
-    lazy = false,
-    config = function()
-      require "custom.configs.upair"
-    end,
-  },
-
-  {
     "Darazaki/indent-o-matic",
     lazy = false,
     config = function()
