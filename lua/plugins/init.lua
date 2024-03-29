@@ -1,20 +1,18 @@
-local overrides = require "custom.configs.overrides"
+local overrides = require "configs.overrides"
 
----@type NvPluginSpec[]
-local plugins = {
+return {
+  {
+    "stevearc/conform.nvim",
+    config = function()
+      require "configs.conform"
+    end,
+  },
+
   {
     "neovim/nvim-lspconfig",
-    dependencies = {
-      {
-        "jose-elias-alvarez/null-ls.nvim",
-        config = function()
-          require "custom.configs.null-ls"
-        end,
-      },
-    },
     config = function()
-      require "plugins.configs.lspconfig"
-      require "custom.configs.lspconfig"
+      require('nvchad.configs.lspconfig').defaults()
+      require "configs.lspconfig"
     end,
   },
 
@@ -55,7 +53,7 @@ local plugins = {
     "Darazaki/indent-o-matic",
     lazy = false,
     config = function()
-      require "custom.configs.indent-o-matic"
+      require "configs.indent-o-matic"
     end,
   },
 
@@ -63,7 +61,7 @@ local plugins = {
     "abecodes/tabout.nvim",
     lazy = false,
     config = function()
-      require "custom.configs.tabout"
+      require "configs.tabout"
     end,
   },
   {
@@ -72,5 +70,3 @@ local plugins = {
     config = true
   },
 }
-
-return plugins
