@@ -1,12 +1,13 @@
 ---@type ChadrcConfig
 local M = {}
 
-M.ui = {
+M.base64 = {
   theme_toggle = { "github_dark", "github_light" },
 	theme = "github_dark",
-  nvdash = {
-    load_on_startup = true,
-  },
+}
+
+M.nvdash = {
+  load_on_startup = true,
 }
 
 return M
